@@ -1,0 +1,174 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(0, 0, 0); /* white, #FFFFFF */
+	padding: 2em;
+	margin: 0;
+	font-family: "Inter", arial, sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+}
+
+p {
+	font-weight: lighter;
+	margin: 20px 0px 1em -150px;
+	max-width: 35em;
+	line-height: 1.4;
+	color:white
+}
+
+h1 {
+	font-family: monospace, arial, sans-serif,light;
+	font-style:black;
+	margin: 0px 0px 0px -150px;
+    font-size: 5em;	
+    color:rgb(225, 255, 0)
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid rgb(225, 255, 0);
+  white-space: nowrap;
+  animation: typing 5s steps(17, end), blink-caret .75s step-end infinite, hide-cursor 0s 3.5s forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(225, 255, 0) }
+}
+
+@keyframes hide-cursor {
+  to { border-right: none; }
+}
+
+h4 {
+	margin: 0;
+	color:rgb(225, 255, 0)
+}
+
+iframe {
+	margin: 0px 0px 0px -150px;
+	display: block;
+	border: none;
+	width: 100%;
+}
+
+header,
+section {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	margin-bottom: 2em;
+	padding-top: 0.25em;
+}
+
+.filetto {
+	border-top: solid 2px rgb(225, 255, 0);
+}
+
+.titolo-sezione {
+	margin: 0px, 0px 100px 0px;
+}
+
+ul {
+	color:rgb(255, 255, 255);
+	margin: 0px 0px 0px -180px;
+	padding: 0;
+}
+
+/* -- Indice Laterale / Fixed Index -- */
+
+.indice-laterale {
+	position: fixed;
+	top: 2em;
+	right: 2em;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.9);
+	border: 2px solid rgb(225, 255, 0);
+	border-radius: none;
+	padding: 1.5em;
+	max-width: 150px;
+}
+
+.indice-laterale ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.indice-laterale li {
+	margin-bottom: 0.75em;
+	font-size: 0.85em;
+}
+
+.indice-laterale li:last-child {
+	margin-bottom: 0;
+}
+
+.indice-laterale a {
+	color: rgb(225, 255, 0);
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: block;
+	padding: 0.25em 0.5em;
+	border-radius: 2px;
+}
+
+.indice-laterale a:hover {
+	background-color: rgba(225, 255, 0, 0.1);
+	padding-left: 0.75em;
+}
+
+/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
+
+/* Styles for equations inserted in the document */
+
+.equazione-math {
+	color: #ffffff;
+	text-align: center;
+	max-width: 36em;
+	margin: 50px 0px 0px -250px;
+}
+
+.equazione-math .katex,
+.equazione-math .katex-display,
+.equazione-math .katex .katex-html {
+	color: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+	header,
+	section {
+		grid-template-columns: 1fr;
+	}
+	.contenitore {
+		width:100%;
+	}
+	.contenuto-sezione {
+		width: 100%;
+	}
+	.titolo-sezione {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+	.indice-laterale {
+		top: 1em;
+		right: 1em;
+		padding: 1em;
+		max-width: 120px;
+		font-size: 0.75em;
+	}
+	.indice-laterale li {
+		margin-bottom: 0.5em;
+	}
+}
