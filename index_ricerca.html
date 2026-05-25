@@ -23,6 +23,7 @@
 	<!-- Dynamic Index -->
 	<nav class="indice-laterale">
 		<ul>
+			<li><p class="indice-titolo">indice</p></li>
 			<li><a href="#capitolo-1">Capitolo 1</a></li>
 			<li><a href="#capitolo-2">Capitolo 2</a></li>
 			<li><a href="#capitolo-3">Capitolo 3</a></li>
@@ -39,30 +40,42 @@
 
 		<header id="capitolo-1">
 			<span></span>
-			<h2>Organic algorithmic</h2> <br>
+			<h2>ORGANIC ALGORITHMIC</h2> <br>
 			<h1 class="typewriter">Reaction-Diffusion</h1>
 		</header>
 
 		<!-- --------------------------------------------------------------------- -->
 
 		<section class="filetto">
-			<h4 class="titolo-sezione">Capitolo 1: <br>Alan Turing</h4>
+			<h4 class="titolo-sezione">Capitolo 1:</h4>
+			<h3 class=""
 			<div class="contenuto-sezione">
-				<p>
-					Uno dei pionieri della biologia matematica può essere considerato <strong>Alan Turing</strong>, 
-					che nel 1952 attraverso <em class="sottile">The chemical basis of morphogenesis</em> cercò di dare una spiegazione matematica della <strong>morfogenesi</strong>, che corrisponde 
-					in embriologia all’insieme dei processi che portano alla diversificazione di tessuti e organi 
-					a partire da elementi costituenti indifferenziati. Egli propose un modello di <strong>reazione-diffusione</strong>	 
-					che prevede la presenza di elementi chiamati morfogeni, che diffondono modificando la loro concentrazione 
-					e controllano i processi di differenziazione. 
-					Il problema, matematicamente, è definito da equazioni alle derivate parziali. Il modello è, tuttavia, molto versatile 
-					e può essere applicato a diversi ambiti, tra cui ad esempio chimica, ecologia, biologia. Esso infatti è in grado di 
-					descrivere la formazione di strutture spaziali regolari in un sistema costituito da due sostanze, attivatore e inibitore. 
-					Ciò è conseguenza dell’instabilità del sistema a piccole perturbazioni senza le quali esso si troverebbe in uno stato omogeneo.
-				</p>
-				<img src="giraffa.webp" alt="esempio" style="width: 250px; height: auto; margin-left: -150px; margin-top: 20px;">
-				<img src="ghepardo.jpg" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 20px;">
-				<img src="boxfish.jpg" alt="esempio" style="width: 550px; height: auto; margin-left: 20px; margin-top: 20px;">
+				<div class="testo-e-immagini">
+					<div class="testo-primo-capitolo">
+						<p>
+							Uno dei pionieri della biologia matematica può essere considerato <strong>Alan Turing</strong>, 
+							che nel 1952 attraverso <em class="sottile">The chemical basis of morphogenesis</em> cercò di dare una spiegazione matematica della <strong>morfogenesi</strong>, che corrisponde 
+							in embriologia all’insieme dei processi che portano alla diversificazione di tessuti e organi 
+							a partire da elementi costituenti indifferenziati. Egli propose un modello di <strong>reazione-diffusione</strong>	 
+							che prevede la presenza di elementi chiamati morfogeni, che diffondono modificando la loro concentrazione 
+							e controllano i processi di differenziazione. 
+							Il problema, matematicamente, è definito da equazioni alle derivate parziali. Il modello è, tuttavia, molto versatile 
+							e può essere applicato a diversi ambiti, tra cui ad esempio chimica, ecologia, biologia. Esso infatti è in grado di 
+							descrivere la formazione di strutture spaziali regolari in un sistema costituito da due sostanze, attivatore e inibitore. 
+							Ciò è conseguenza dell’instabilità del sistema a piccole perturbazioni senza le quali esso si troverebbe in uno stato omogeneo.
+						</p>
+					</div>
+					<div class="immagini-due-colonne">
+						<div class="immagini-colonna">
+							<img src="zebra.png" alt="esempio">
+							<img src="ghepardo.png" alt="esempio">
+						</div>
+						<div class="immagini-colonna">
+							<img src="box_fish.png" alt="esempio">
+							<img src="dart_frog.png" alt="esempio">
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -90,8 +103,7 @@
 					 si moltiplicherebbe all’infinito fino a consumare tutta la sostanza \(U\), spegnendo la reazione e impedendo la nascita di qualsiasi tipo di pattern visivo.
 	
 				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/classe_vettori/"></iframe>
-			</div>
+				
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
@@ -121,7 +133,7 @@
 					<br> Come spiegato in precedenza, la variazione di \(f\) e \(k\) influisce sulle dinamiche del sistema.
 				</p>
 			
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
+				
 			</div>
 		</section>
 
@@ -152,7 +164,7 @@
 					  L'ultimo termine in entrambe le equazioni descrive la diffusione di \(U\) e \(V\), rispettivamente.
 				</p>
 				
-<img src="8.png" alt="esempio" style="width: 900px; height: auto; margin-left: -150px; margin-top: 0px;">
+<img src="8.png" alt="esempio" style="width: 900px; height: auto; margin-left: -150px; margin-top: -50px;">
 			</div>
 		</section>
 
@@ -164,12 +176,12 @@
 				<p>
 					Simulazione della reazione e diffusione di due sostanze chimiche virtuali su una griglia 2D utilizzando il modello di Gray-Scott.
 					<br><br>1. La sostanza chimica A viene aggiunta a una determinata velocità di "feed".
-<br><br>2. La sostanza chimica B viene rimossa a una determinata velocità di "kill".
-<br><br>3. Le sostanze chimiche A e B reagiscono per produrre una maggiore quantità di sostanza chimica B.
-<br><br>4. Entrambe le sostanze chimiche diffondono, quindi le concentrazioni non uniformi si distribuiscono sulla griglia, ma A diffonde più velocemente di B.
-<br><br>5. Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
-<br><br>6. Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
-<br><br>7. La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.
+<br>2. La sostanza chimica B viene rimossa a una determinata velocità di "kill".
+<br>3. Le sostanze chimiche A e B reagiscono per produrre una maggiore quantità di sostanza chimica B.
+<br>4. Entrambe le sostanze chimiche diffondono, quindi le concentrazioni non uniformi si distribuiscono sulla griglia, ma A diffonde più velocemente di B.
+<br>5. Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
+<br>6. Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
+<br>7. La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.
 
 				</p>
 				<img src="1.png" alt="esempio" style="width: 300px; height: auto; margin-left: -150px; margin-top: 20px;">
@@ -201,7 +213,7 @@
 
 E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è ampliato, notevolmente facilitato dalla simulazione computerizzata.
 				</p>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif">
+				
 			</div>
 		</section>
 

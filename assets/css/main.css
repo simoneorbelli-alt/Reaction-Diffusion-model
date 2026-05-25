@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: rgb(29, 28, 28); /* white, #FFFFFF */
+	background-color: rgb(40, 40, 40); /* white, #FFFFFF */
 	padding: 2em;
 	margin: 0;
 	font-family: "Inter", helvetica, sans-serif;
@@ -11,6 +11,10 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	font-variation-settings: "slnt" 0;
+}
+
+.contenitore {
+	padding-right: 220px;
 }
 
 titolo-sezione {
@@ -24,10 +28,21 @@ titolo-sezione {
 
 p {
 	font-weight: lighter;
-	margin: 20px 0px 1em -150px;
+	margin: 20px 0px 1em -100px;
 	max-width: 35em;
 	line-height: 1.4;
-	color:white
+	color: white;
+}
+
+/* Reset: assicurarsi che il paragrafo del primo capitolo
+   usi gli stessi valori dei paragrafi degli altri capitoli */
+.testo-primo-capitolo p {
+	font-weight: lighter;
+	font-size: 1rem;
+	margin: 20px 0px 1em -100px;
+	max-width: 35em;
+	line-height: 1.4;
+	color: white;
 }
 
 /* Testo del titolo originale di Turing: sottile e corsivo */
@@ -39,6 +54,7 @@ p {
 
 h2{
 	font-family: helvetica, sans-serif,light;
+	font-weight: 100;
 	font-style:black;
 	margin: 0px 0px 0px -150px;
     font-size: 4em;	
@@ -46,8 +62,9 @@ h2{
 }
 h1 {
 	font-family: helvetica, sans-serif,light;
+	font-weight: 100;
 	font-style:black;
-	margin: 0px 0px 0px -150px;
+	margin: 0px 0px 0px -130px;
     font-size: 2.5em;	
     color:rgb(150, 167, 22)
 }
@@ -55,6 +72,7 @@ h1 {
 .typewriter {
   border-right: .15em solid rgb(225, 255, 0);
   white-space: nowrap;
+  margin:0,0,0,200px;
  
 }
 
@@ -97,27 +115,95 @@ section {
 }
 
 .titolo-sezione {
-	margin: 0px, 0px 100px 0px;
+
+	margin: 0px, 0px -100px 0px;
 }
 
-ul {
-	color:rgb(255, 255, 255);
+.cotenuto-sezione {
+	margin: 0px 0px 0px -150px;
+	font-weight: lighter;
 	margin: 20px 0px 1em -150px;
-	padding: 0;
+	max-width: 35em;
+	line-height: 1.4;
+	color:white
+}
+ul {
+	margin: 0px 0px 0px -150px;
+	font-weight: lighter;
+	margin: 20px 0px 1em -150px;
+	max-width: 35em;
+	line-height: 1.4;
+	color:white;
+}
+.testo-e-immagini {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
-/* -- Indice Laterale / Fixed Index -- */
+.testo-primo-capitolo {
+	flex: 1 1 45ch;
+	min-width: 0;
+}
+
+.immagini-due-colonne {
+	flex: 0 0 420px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: 0.75em;
+	row-gap: 0.75em;
+}
+
+.immagini-colonna {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+}
+
+.immagini-colonna img {
+	width: 200px;
+	height: auto;
+	display: block;
+	border: 1px solid rgba(225, 255, 0, 0.15);
+	box-shadow: none;
+}
 
 .indice-laterale {
 	position: fixed;
 	top: 2em;
 	right: 2em;
 	z-index: 1000;
-	background-color: rgba(0, 0, 0, 0.9);
-	border: 1px solid rgb(225, 255, 0);
+	background: transparent;
+	border: none;
 	border-radius: none;
 	padding: 1.5em;
 	max-width: 150px;
+}
+
+/* Filetto verticale tra indice e contenuto (stile simile agli altri filetti) */
+.indice-laterale::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	/* posiziona la linea a sinistra dell'indice; avvicinata di ulteriori 10px */
+	right: calc(2em + 150px - 18px);
+	width: 1px;
+	background: rgb(225, 255, 0);
+	opacity: 1;
+	z-index: 995;
+}
+
+.indice-laterale .indice-titolo {
+	color: rgb(225, 255, 0);
+	margin: 0 0 0.75em 0;
+	font-size: 0.95em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
 }
 
 .indice-laterale ul {
@@ -173,6 +259,7 @@ ul {
 	}
 	.contenitore {
 		width:100%;
+		padding-right: 0;
 	}
 	.contenuto-sezione {
 		width: 100%;
