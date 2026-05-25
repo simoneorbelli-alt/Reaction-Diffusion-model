@@ -13,6 +13,15 @@ body {
 	font-variation-settings: "slnt" 0;
 }
 
+titolo-sezione {
+	font-family: "Inter", arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+	color: rgb(225, 255, 0);
+	margin: 0px 0px 0px -150px;
+}
+
 p {
 	font-weight: lighter;
 	margin: 20px 0px 1em -150px;
@@ -80,7 +89,7 @@ section {
 
 ul {
 	color:rgb(255, 255, 255);
-	margin: 0px 0px 0px -180px;
+	margin: 20px 0px 1em -150px;
 	padding: 0;
 }
 
