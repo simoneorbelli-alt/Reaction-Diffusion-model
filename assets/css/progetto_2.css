@@ -14,7 +14,25 @@ body {
 	font-variation-settings: "slnt" 0;
 }
 
+.didascalia {
+	font-family: "Roboto", helvetica, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+	color: rgb(164, 164, 164);
+	margin: 10px 0px 0px 100px;
+	line-height: 1.4em;
+	max-width: 80em;
+}
 
+.elenco-puntato {
+	padding: 0;
+	color: rgb(164, 164, 164);
+	margin: 0px 0px 0px 0px;
+    line-height: 1.4em;
+	max-width: 35em;
+
+}
 .margine-immagine {
 	margin: 0px 0px 0px 215px;
 }
@@ -65,7 +83,8 @@ body {
 	
     color: rgb(225, 255, 0);            
     font-size: 15px; 
-	margin: 0px,0px,0px,100px;        
+	text-align:right;
+	margin: 0px,0px,0px,0px;        
     font-family: "Inter", helvetica, sans-serif;
     text-decoration: none;      
     transition: 0.3s;
@@ -82,7 +101,7 @@ p {
 
 h1 {
 	margin: 0px 100px 0px -460px;
-	font-size: 4em;
+	font-size: 5em;
 	color: rgb(225, 255, 0);
 }
 h2 {
@@ -103,7 +122,7 @@ h3 {
 h4 {
 	font-size: 1.25em;
 color: rgb(255, 255, 255);
-    margin: 30px 0px 0px 100px;
+    margin: 50px 0px -10px 100px;
 }
 
 
@@ -169,11 +188,12 @@ section {
 }
 .indice-titolo {
 	color: rgb(225, 255, 0);
-	margin: 0 0 0.75em 0;
+	margin: 0px 0px 20px 0px;
 	font-size: 1.15em;
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
+	list-style-type: none;
 }
 ul {
 	margin: 0;

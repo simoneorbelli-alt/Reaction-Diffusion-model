@@ -35,11 +35,11 @@
 		
 			<span></span>
 			
-				<ul>
+				<ul style="list-style-type: none;">
 					<li><p class="indice-titolo">Indice</p></li>
 	<li><a href="#Introduzione"class="classe-link">Introduzione</a></li>
-	<li><a href="#funzioni"class="classe-link">funzioni</a></li>
-	<li><a href="#linea tratteggiata"class="classe-link">linea tratteggiata</a></li>
+	<li><a href="#Funzioni"class="classe-link">funzioni</a></li>
+	<li><a href="#Applicazioni"class="classe-link">applicazioni</a></li>
 	<li><a href="tool/index.html"class="classe-link">Tool</a></li>	
 	</ul>
 			
@@ -61,7 +61,7 @@
 			
 			
 			<div class="contenuto-sezione">
-				<h4 class="titolo-sezione"><span style="font-size: 30px;">01</span> Alan Turing</h4>
+				<h4 class="titolo-sezione"> Alan Turing</h4>
 				<section class="filetto_sottotitoli"></section>
 				
 				<p>
@@ -92,8 +92,9 @@
   </div>
 
 </div>
+<p class="didascalia">Dettaglio del pattern sulla pelle di un pesce scatola giallo.<span style="margin-left: 420px;">Dall'alto verso il basso: <br><span style="margin-left: 827px;">Zebra, Ghepardo, Rana freccia</span></span> </p>
 
-				<h4 class="titolo-sezione"><span style="font-size: 30px;">02</span> modelli matematici</h4>
+				<h4 class="titolo-sezione"> Modelli matematici</h4>
 				<section class="filetto_sottotitoli"></section>
 				<p> <span style="line-height: 1; font-size: 16px;">
 					I modelli di Reaction-Diffusion sono composti dall'interazione di 2 elementi dispersi su un piano. 
@@ -105,13 +106,13 @@
                     dinamica attivatore-inibitore, spesso utilizzato per creare modelli tramite computer grafica o per studiare strutture auto-organizzate.<br>
 					
 				</p>
-				<h4 class="titolo-sezione"><span style="font-size: 30px;">03</span> Il modello di Gray-Scott</h4>
+				<h4 class="titolo-sezione"> Il modello di Gray-Scott</h4>
 				<section class="filetto_sottotitoli"></section>
 				<p>Nel modello originale di Turing (Attivatore-Inibitore)Turing ha ipotizzato la presenza di due sostanze 
 					distinte: L’Attivatore, che stimola la produzione di se stesso e dell’altra sostanza e l’Inibitore che invece blocca attivamente la prima per frenarne la crescita.<br>
 					Il modello specifico di Gray-Scott ha eliminato la necessità di un inibitore chimico separato. Ha invece introdotto un meccanismo puramente matematico e cinetico:
 					la sostanza \(A\) viene aggiunta al sistema secondo un "tasso di alimentazione o feed rate" \(f\),
-                    mentre la sostanza \(B\) viene rimossa secondo un "tasso di uccisione o kill rate" \(k\). \(B\) consuma \(A\) e produce altra sostanza,
+                    mentre la sostanza \(B\) viene rimossa secondo un"tasso di uccisione o kill rate" \(k\). \(B\) consuma \(A\) e produce altra sostanza,
                     mimando l'autocatalisi, o per analogia, i lupi (\(B\)) che mangiano i cervi (\(A\)).	
 				</p>
 
@@ -119,25 +120,31 @@
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
-<section class="filetto" id="funzioni"></section>
+<section class="filetto" id="Funzioni"></section>
 		<section class="filetto_2" ></section>
 			<h3 class="titolo-sezione">Funzioni</h3>
 			<section class="filetto_vs"></section>
 			<section class="filetto"></section>
 			<div class="contenuto-sezione">
-				<h4 class="titolo-sezione"><span style="font-size: 30px;">01</span> visualizzazione</h4>
+				<h4 class="titolo-sezione"> Visualizzazione</h4>
 				<section class="filetto_sottotitoli"></section>
 				
 				<p>
 								Simulazione della reazione e diffusione di due sostanze chimiche virtuali su una griglia 2D utilizzando il modello di Gray-Scott.
-					<br><br>1. La sostanza chimica A viene aggiunta a una determinata velocità di "feed".
-<br>2. Le sostanze chimiche A e B reagiscono per produrre una maggiore quantità di sostanza chimica B.
-<br>3. La sostanza chimica B viene rimossa a una determinata velocità di "kill".
-<br>4-5. Entrambe le sostanze chimiche diffondono, quindi le concentrazioni non uniformi si distribuiscono sulla griglia, ma A diffonde più velocemente di B.
-<br>6. Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
-<br>7. Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
-<br>La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.
-</p>
+								</p>
+								<div class="elenco-puntato">
+								<ul style="list-style-type: numbers;">
+									<li>La sostanza chimica A viene aggiunta a una determinata velocità di "feed".
+									<li>Le sostanze chimiche A e B reagiscono per produrre una maggiore quantità di sostanza chimica B.
+									<li>La sostanza chimica B viene rimossa a una determinata velocità di "kill".
+									<li>Entrambe le sostanze chimiche diffondono, quindi le concentrazioni non uniformi si distribuiscono sulla griglia, ma A diffonde più velocemente di B.
+									<li>Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
+									<li>Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
+									<li>Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
+								</ul>
+								</div>
+								<p>	La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.</p>
+			
 <div class="margine-immagine">	
 				<img src="1.png" alt="esempio" style="width: 300px; height: auto; margin-left: -150px; margin-top: 20px;">
 				<img src="2.png" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 20px;">
@@ -149,7 +156,7 @@
 				</div>
 			</div>
 				</p>
-				<h4 class="titolo-sezione"><span style="font-size: 30px;">02</span> Equazioni</h4>
+				<h4 class="titolo-sezione"> Equazioni</h4>
 				<section class="filetto_sottotitoli"></section>
 					<p>
 					Il sistema di Gray-Scott è definito da due equazioni che descrivono il comportamento di due sostanze reagenti:<br>
@@ -173,15 +180,38 @@
 					 la reazione tra le due sostanze. 
 					<br> Come spiegato in precedenza, la variazione di \(f\) e \(k\) influisce sulle dinamiche del sistema.
 				</p>
-				
+				<iframe scrolling=no frameborder=0 height=500 src="sketches/sketch.html"></iframe>
 				
 <img src="8.png" alt="esempio" style="width: 800px; height: auto; margin-left: 85px; margin-top: -50px;">
 			</div>			
 				
 		</section>
-		<h4 class="titolo-sezione"><span style="font-size: 30px;">03</span> Elementi</h4>
+		<h4 class="titolo-sezione"> Elementi</h4>
 				<section class="filetto_sottotitoli"></section>
 					<p>Poiché una molecola di \(A\) e due di \(B\)
+					  reagiscono, il termine corrispondente include \(a\) elevato alla potenza 
+					  di uno e \(B\) elevato alla potenza di due: \(ab²\) . Poiché \(A\) viene consumato 
+					  dalla reazione, il termine ha segno negativo nella prima equazione.
+					   Nella seconda equazione ha segno positivo, poiché \(B\) viene prodotto 
+					   nella reazione.
+                     Il secondo termine della prima equazione descrive la velocità con cui 
+					 \(A\) viene reintegrato esternamente. Ciò è necessario, poiché \(A\)altrimenti 
+					 verrebbe semplicemente consumato. La velocità di alimentazione è data
+					  dal parametro \(F\). \(F\) viene moltiplicato per \(1 - a\) per garantire che \(a\) venga 
+					  reintegrato a una velocità dipendente dalla concentrazione attuale, 
+					  che non supera mai \(1\). \(B\) non necessita di essere reintegrato, poiché viene 
+					  prodotto nella reazione. Al contrario, deve essere rimosso per 
+					  mantenere la reazione. La velocità di rimozione, o "velocità di 
+					  uccisione", è controllata dal parametro \(k\). Per rimuovere \(B\)più 
+					  velocemente di quanto venga aggiunto \(A\), si aggiunge \(K\) a \(F\) e si 
+					  moltiplica per \(b\), poiché si presume che anche la rimozione 
+					  di \(B\) dipenda dalla sua concentrazione.
+					  L'ultimo termine in entrambe le equazioni, essendo un'equazione laplaciana, descrive la diffusione di \(A\) e \(B\), rispettivamente.
+
+					</p>
+					<h4 class="titolo-sezione"> Algoritmo</h4>
+				<section class="filetto_sottotitoli"></section>
+				<p>Poiché una molecola di \(A\) e due di \(B\)
 					  reagiscono, il termine corrispondente include \(a\) elevato alla potenza 
 					  di uno e \(B\) elevato alla potenza di due: \(ab²\) . Poiché \(A\) viene consumato 
 					  dalla reazione, il termine ha segno negativo nella prima equazione.
@@ -205,12 +235,35 @@
 
 		<!-- --------------------------------------------------------------------- -->
 <section class="filetto"></section>
-		<section class="filetto_2"></section>
-			<h3 class="titolo-sezione">Linea tratteggiata</h3>
+		<section class="filetto_2" id="Applicazioni"></section>
+			<h3 class="titolo-sezione">Applicazioni</h3>
 			<section class="filetto_vs"></section>
 			<section class="filetto"></section>
 			<div class="contenuto-sezione">
+				<h4 class="titolo-sezione"> Scoperte</h4>
+				<section class="filetto_sottotitoli"></section>
 				<p>
+					I modelli creati da questa equazione, e da altre equazioni molto simili, sembrano assomigliare molto ad alcuni modelli osservati negli esseri viventi. Tali connessioni sono state suggerite da diversi scienziati nel corso degli anni:<br><br>
+				</p>
+				<div class="elenco-puntato">
+				<ul style="list-style-type: square;">
+					<li>1952-Turing (maculatura; gastrulazione dell'embrione; macchie multiple in un sistema unidimensionale)</li>
+					<li>1974-Bard e Lauder (foglie, follicoli piliferi)</li>
+					<li>1981-Bard (macchie su cervi e giraffe)</li>
+					<li>1981-Murray (ali di farfalla)</li>
+					<li>1982-Meinhardt(strisce, venature sulle foglie)</li>
+					<li>1984-Young (sviluppo dell'occhio)</li>
+					<li>1987-Meinhardt e Klinger (conchiglie di molluschi)</li>
+					<li>1991-Turk (leopardo, giaguaro, zebra)</li>
+				</ul>
+				</div>
+				<p>
+
+E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è ampliato, notevolmente facilitato dalla simulazione computerizzata.
+				</p>
+				<h4 class="titolo-sezione"> Implementazione</h4>
+				<section class="filetto_sottotitoli"></section>
+			<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
 					In cursus aliquam odio eu eleifend.
@@ -231,59 +284,10 @@
 		</section>
 
 		<!-- --------------------------------------------------------------------- -->
-<section class="filetto"></section>
-		<section class="filetto_2"></section>
-			<h3 class="titolo-sezione">Spirograph</h3>
-			<section class="filetto_vs"></section>
-			<section class="filetto"></section>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				
-
-			</div>
-		</section>
 
 <!-- --------------------------------------------------------------------- -->
-<section class="filetto"></section>
-		<section class="filetto_2"></section>
-			<h3 class="titolo-sezione"> Radianti (GIF)</h3>
-			<section class="filetto_vs"></section>
-			<section class="filetto"></section>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
+
 				
-			</div>
-		</section>
 
 <!-- --------------------------------------------------------------------- -->
 <section class="filetto"></section>
@@ -291,7 +295,7 @@
 			<h3 class="titolo-sezione">Bibliografia</h3>
 			<section class="filetto_vs"></section>
 			<section class="filetto"></section>
-			<div class="contenuto-sezione">
+			<div class="elenco-puntato">
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
 					<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
