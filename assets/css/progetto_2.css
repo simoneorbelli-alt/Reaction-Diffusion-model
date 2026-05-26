@@ -27,7 +27,14 @@ ul li::marker {
 	line-height: 1.4em;
 	max-width: 80em;
 }
-
+.colophon {
+    font-weight: lighter;
+	font-style: normal;
+	color: rgb(255, 255, 255);
+	margin: 0px 0px 0px 100px;
+	line-height: 1.4em;
+	max-width: 80em;
+}
 .elenco-puntato {
 	padding: 0;
 	color: rgb(164, 164, 164);
