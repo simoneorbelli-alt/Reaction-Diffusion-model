@@ -1,0 +1,184 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: rgb(0, 0, 0); /* white, #FFFFFF */
+	padding: 2em;
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+}
+
+
+.titolo-con-numero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titolo{
+	white-space: nowrap;
+	overflow: visible;
+	color: rgb(225, 255, 0);
+}
+.classe-link {
+	
+    color: rgb(225, 255, 0);            
+    font-size: 15px; 
+	margin: 0px,0px,0px,100px;        
+    font-family: "Inter", helvetica, sans-serif;
+    text-decoration: none;      
+    transition: 0.3s;
+	}
+	.classe-link:hover {
+    color: #cc2e53;             /* Cambia in Verde al passaggio del mouse */
+}
+p {
+	margin: 1px 0px 50px 100px;
+	max-width: 35em;
+	color: rgb(164, 164, 164);
+	line-height: 1.4em;
+}
+
+h1 {
+	margin: 0px 100px 0px -460px;
+	font-size: 4em;
+	color: rgb(225, 255, 0);
+}
+h2 {
+	margin: 20px 100px 100px 100px;
+	font-size: 2.5em;
+	font-weight: 400;
+	white-space: nowrap;
+	color: rgba(225, 255, 0);
+}
+
+
+h3 {
+	font-size: 2.5em;
+	font-weight: 400;
+	margin: 0px 100px 0px 100px;
+	color: rgb(225, 255, 0);
+}
+h4 {
+	font-size: 1.25em;
+color: rgb(255, 255, 255);
+    margin: 30px 0px 0px 100px;
+}
+
+
+iframe {
+	margin: 0;
+	display: block;
+	border: none;
+	width: 100%;
+}
+
+header,
+section {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	margin-bottom: 2em;
+	padding-top: 0.25em;
+	color: rgb(225, 255, 0);
+}
+.filetto_2 {
+	display: inline-block;
+	vertical-align: middle;
+	border-left: solid 0.5px rgb(225, 255, 0,0.634 );
+	height: 4em;
+	margin: 0 0 0 100px;
+	padding-right: 0.5em;
+	color: rgb(225, 255, 0);
+}
+.filetto_2 + h3 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 50px 0 0;
+	color: rgb(225, 255, 0);
+	}
+.filetto {
+	border-top: solid 0.5px rgb(225, 255, 0, 0.634);
+	margin: 0px -10px -4px 100px;
+	color: rgba(225, 255, 0, 0.634);
+	max-width: 80em;
+}
+.filetto_reaction {
+	border-top: solid 0.5px rgba(225, 255, 0, 0.634);
+	margin: 0px 0px 100px 100px;
+	color: rgba(225, 255, 0, 0.634);
+}
+.filetto_sottotitoli {
+	border-top: solid 0.5px rgba(170, 170, 170, 0.634);
+	margin: 20px 0px -4px 100px;
+	
+	color: rgba(225, 255, 0, 0.634);
+	max-width: 36em;
+}
+.filetto_vs {
+	display: inline-block;
+	vertical-align: middle;
+	border-left: solid 0.5px rgb(225, 255, 0,0.634 );
+	height: 4em;
+	margin: 0px 0 0 -30px;
+	padding-right: 0.5em;
+	color: rgb(225, 255, 0);
+}
+.titolo-sezione {
+	margin-right: 1em;
+}
+.indice-titolo {
+	color: rgb(225, 255, 0);
+	margin: 0 0 0.75em 0;
+	font-size: 1.15em;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	color: rgb(164, 164, 164);
+	margin: 20px 0px 100px 100px;
+}
+/* Styles for equations inserted in the document */
+
+.equazione-math {
+	color: #ffffff;
+	text-align: center;
+	max-width: 36em;
+	margin: 50px 0px 50px -50px;
+	font-optical-sizing: auto;
+	
+}
+
+.equazione-math .katex,
+.equazione-math .katex-display,
+.equazione-math .katex .katex-html {
+	color: inherit;
+	
+}
+/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
+
+@media only screen and (max-width: 600px) {
+	header,
+	section {
+		grid-template-columns: 1fr;
+	}
+	.contenitore {
+		width:100%;
+	}
+	.contenuto-sezione {
+		width: 100%;
+	}
+	.titolo-sezione {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+}
