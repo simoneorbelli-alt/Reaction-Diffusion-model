@@ -204,27 +204,72 @@
 					</p>
 					<h4 class="titolo-sezione"> Algoritmo</h4>
 				<section class="filetto_sottotitoli"></section>
-				<p>Poiché una molecola di \(A\) e due di \(B\)
-					  reagiscono, il termine corrispondente include \(a\) elevato alla potenza 
-					  di uno e \(B\) elevato alla potenza di due: \(ab²\) . Poiché \(A\) viene consumato 
-					  dalla reazione, il termine ha segno negativo nella prima equazione.
-					   Nella seconda equazione ha segno positivo, poiché \(B\) viene prodotto 
-					   nella reazione.
-                     Il secondo termine della prima equazione descrive la velocità con cui 
-					 \(A\) viene reintegrato esternamente. Ciò è necessario, poiché \(A\)altrimenti 
-					 verrebbe semplicemente consumato. La velocità di alimentazione è data
-					  dal parametro \(F\). \(F\) viene moltiplicato per \(1 - a\) per garantire che \(a\) venga 
-					  reintegrato a una velocità dipendente dalla concentrazione attuale, 
-					  che non supera mai \(1\). \(B\) non necessita di essere reintegrato, poiché viene 
-					  prodotto nella reazione. Al contrario, deve essere rimosso per 
-					  mantenere la reazione. La velocità di rimozione, o "velocità di 
-					  uccisione", è controllata dal parametro \(k\). Per rimuovere \(B\)più 
-					  velocemente di quanto venga aggiunto \(A\), si aggiunge \(K\) a \(F\) e si 
-					  moltiplica per \(b\), poiché si presume che anche la rimozione 
-					  di \(B\) dipenda dalla sua concentrazione.
-					  L'ultimo termine in entrambe le equazioni, essendo un'equazione laplaciana, descrive la diffusione di \(A\) e \(B\), rispettivamente.
-
+				<p>Nel codice, il modello di Reazione-Diffusione di Gray-Scott viene calcolato all'interno
+					del loop principale per ogni singola cella della griglia.Il sistema si basa su due
+					equazioni differenziali alle derivate parziali che descrivono come cambiano nel tempo 
+					le concentrazioni delle sostanze \(A\) e \(B\):$$\frac{\partial A}{\partial t} = d_A \nabla^2 
+					A - AB^2 + f(1 - A)$$$$\frac{\partial B}{\partial t} = d_B \nabla^2 B + AB^2 - (k + f)B$$
+					Queste componenti matematiche vengono tradotte in codice JavaScript:
 					</p>
+					<h5 class="punto">calcolo dell'equazione laplaciana</h5>
+					<p>(\(\nabla^2 A\))Il termine \(\nabla^2 A\) e \(\nabla^2 B\) rappresenta la diffusione nello spazio. 
+						Nel codice viene simulato guardando gli 8 pixel vicini a quello corrente usando una matrice di
+						 convoluzione (kernel).Invece di usare una funzione esterna (che rallenterebbe il sistema), 
+						 il calcolo è scritto "in linea" per la massima velocità: $$\Delta A_{i} = -1.0 \cdot A_{i} + 0.2 \Big( A_{i-1} + A_{i+1} + A_{i-W} + A_{i+W} \Big) + 0.05 \Big( A_{i-1-W} + A_{i+1-W} + A_{i-1+W} + A_{i+1+W} \Big)$$
+                      Nel centro (a * -1.0) il pixel corrente "perde" concentrazione verso l'esterno. I vicini cardinali (0.2), Sopra, sotto, 
+                    destra e sinistra scambiano il 20% della sostanza.I vicini diagonali (0.05), cioè gli angoli scambiano il 5% della sostanza.
+					è importante sottolineare che la lettera \(w\) in questo caso rappresenta la larghezza della griglia, e viene usata per calcolare l'indice dei pixel vicini in un array monodimensionale che rappresenta la griglia 2D.
+					</p>
+					<h5 class="punto">la reazione chimica</h5>
+				<p>
+Il termine \(AB^2\) rappresenta la reazione vera e propria: 
+una molecola di \(A\) incontra due molecole di \(B\), trasformando 
+\(A\) in altra sostanza \(B\). Nel codice questa interazione viene calcolata 
+semplicemente moltiplicando le concentrazioni:
+</p>
+<div class="equazione-math">
+					$$
+					\text{abb} = a \cdot b \cdot b
+					$$
+				</div>
+
+
+<p>
+    Nella formula di \(A\), questo valore viene sottratto ($-\text{abb}$) perché \(A\) si consuma. Nella formula di \(B\), questo valore viene aggiunto ($+\text{abb}$) perché \(B\) aumenta grazie alla conversione di \(A\).
+</p>
+<h5 class="punto">feed e kill</h5>
+				<p>
+					I cursori (slider) controllano direttamente questi due parametri 
+					di ricambio fluidodinamico: \(f * (1.0 - a)\): Il tasso di alimentazione
+					 (Feed). Aggiunge costantemente la sostanza \(A\) nel sistema per evitare 
+					 che si esaurisca, ma solo se la cella non è già satura (infatti 
+					 è moltiplicata per \(1.0 - a)\).<br>
+					 \((k + f) * b\): Il tasso di rimozione 
+					 (Kill). Rappresenta la velocità con cui la sostanza \(B\) decade o viene
+					  eliminata dal sistema. Nota che include anche il fattore \(f\) perché 
+					  l'aggiunta di nuovo fluido \(A\) "lava via" una parte di \(B\).
+
+</p>
+<h5 class="punto">l'integrazione nel tempo</h5>
+				<p>
+					(\(\Delta t\))Per calcolare lo stato successivo, i tassi di variazione
+					 vengono sommati alla concentrazione attuale. Nello sketch assumiamo un
+					  passo temporale \(\Delta t = 1\): \(nA = a\) + (\(dA * lapA)\) - \(abb\) 
+					  + (\(f * (1.0 - a))\);<br>
+					let \(nB = b + (dB * lapB)\) + \(abb\) - (\(k + f) * b\);
+
+</p>
+<h5 class="punto">controllo di stabilità</h5>
+				<p>
+					Poiché i calcoli al computer lavorano con approssimazioni discrete
+					 e i valori dei cursori possono essere estremi, c'è il rischio di 
+					 "instabilità numerica" (valori che diventano negativi o infiniti, 
+					 rompendo la simulazione).Il codice applica una protezione istantanea:<br>
+					 if \((nA < 0)\) \(nA = 0\); else if \((nA > 1)\) \(nA = 1\);<br>
+                     if \((nB < 0)\) \(nB = 0\); else if \((nB > 1)\) \(nB = 1\);<br>
+                      I nuovi valori vengono salvati nell'array \(nextA\) e \(nextB\) e, alla fine del ciclo, la griglia "successiva" diventa la griglia "corrente" per il frame successivo.
+                 </p>
+
 
 		<!-- --------------------------------------------------------------------- -->
 <section class="filetto"></section>

@@ -17,6 +17,19 @@ body {
 ul li::marker {
   color: #ffffff; /* Sostituisci con il colore che preferisci */
 }
+.punto {
+	color: rgb(255, 255, 255);
+	line-height: 1.4em;
+	max-width: 35em;
+	font-family: "Roboto", helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: 100;
+	}
+h5 {
+	font-size: 1em;
+	color: rgb(255, 255, 255);
+	margin: 10px 0px 10px 100px;
+}
 .didascalia {
 	font-family: "Roboto", helvetica, sans-serif;
 	font-weight: lighter;
