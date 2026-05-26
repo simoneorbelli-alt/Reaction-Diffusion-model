@@ -15,6 +15,42 @@ body {
 }
 
 
+.margine-immagine {
+	margin: 0px 0px 0px 215px;
+}
+.super-contenitore {
+  display: flex;
+  gap: 15px;          /* Spazio tra la colonna sinistra e quella destra */
+  align-items: flex-start; /* Allinea tutto partendo dall'alto */
+  margin: 0px 0px 0px 100px;
+}
+
+/* Gestisce la prima colonna */
+.colonna-sinistra {
+  flex: 1.5;            /* Prende metà dello spazio disponibile */
+}
+
+/* Gestisce la seconda colonna (Incolonna le immagini) */
+.colonna-destra {
+  flex: 1;            /* Prende l'altra metà dello spazio */
+  display: flex;
+  flex-direction: column; /* Forza il posizionamento verticale (una sotto l'altra) */
+  gap: 6px;          /* Spazio tra la seconda e la terza immagine */
+}
+
+.colonna-sinistra img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* REGOLA SPECIFICA per le immagini di destra */
+.colonna-destra img {
+  width: 49%;          /* Rimpicciolisce le immagini (es. al 60% della colonna) */
+  height: auto;        /* Mantiene le proporzioni */
+  display: block;
+}
+
 .titolo-con-numero {
     display: flex;
     justify-content: space-between;

@@ -76,7 +76,23 @@
 							descrivere la formazione di strutture spaziali regolari in un sistema costituito da due sostanze, attivatore e inibitore. 
 							Ciò è conseguenza dell’instabilità del sistema a piccole perturbazioni senza le quali esso si troverebbe in uno stato omogeneo.
 				</p>
-				<img src="box_fish.png" style="width: 900px; height: auto; margin-left: -150px; margin-top: 0px;">
+				<div class="super-contenitore">
+  
+  <!-- Prima colonna (Sinistra) -->
+  <div class="colonna-sinistra">
+    <img src="box_fish.png" >
+  </div>
+  
+  <!-- Seconda colonna (Destra) -->
+  <div class="colonna-destra">
+    <img src="zebra.png">
+    <img src="ghepardo.png">
+	<img src="dart_frog.png">
+
+  </div>
+
+</div>
+
 				<h4 class="titolo-sezione"><span style="font-size: 30px;">02</span> modelli matematici</h4>
 				<section class="filetto_sottotitoli"></section>
 				<p> <span style="line-height: 1; font-size: 16px;">
@@ -121,6 +137,17 @@
 <br>6. Il sistema viene approssimato utilizzando due valori per ogni cella della griglia, che rappresentano le concentrazioni locali di A e B. (Le particelle non vengono simulate individualmente.)
 <br>7. Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
 <br>La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.
+</p>
+<div class="margine-immagine">	
+				<img src="1.png" alt="esempio" style="width: 300px; height: auto; margin-left: -150px; margin-top: 20px;">
+				<img src="2.png" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 20px;">
+				<img src="3.png" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 20px;"><br>
+				<img src="4.png" alt="esempio" style="width: 300px; height: auto; margin-left: -150px; margin-top: 20px;">
+				<img src="5.png" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 20px;">
+				<img src="6.png" alt="esempio" style="width: 300px; height: auto; margin-left: 20px; margin-top: 5px;"><br>
+				<img src="7.png" alt="esempio" style="width: 300px; height: auto; margin-left: 200px; margin-top: 10px;">
+				</div>
+			</div>
 				</p>
 				<h4 class="titolo-sezione"><span style="font-size: 30px;">02</span> Equazioni</h4>
 				<section class="filetto_sottotitoli"></section>
@@ -152,6 +179,29 @@
 			</div>			
 				
 		</section>
+		<h4 class="titolo-sezione"><span style="font-size: 30px;">03</span> Elementi</h4>
+				<section class="filetto_sottotitoli"></section>
+					<p>Poiché una molecola di \(A\) e due di \(B\)
+					  reagiscono, il termine corrispondente include \(a\) elevato alla potenza 
+					  di uno e \(B\) elevato alla potenza di due: \(ab²\) . Poiché \(A\) viene consumato 
+					  dalla reazione, il termine ha segno negativo nella prima equazione.
+					   Nella seconda equazione ha segno positivo, poiché \(B\) viene prodotto 
+					   nella reazione.
+                     Il secondo termine della prima equazione descrive la velocità con cui 
+					 \(A\) viene reintegrato esternamente. Ciò è necessario, poiché \(A\)altrimenti 
+					 verrebbe semplicemente consumato. La velocità di alimentazione è data
+					  dal parametro \(F\). \(F\) viene moltiplicato per \(1 - a\) per garantire che \(a\) venga 
+					  reintegrato a una velocità dipendente dalla concentrazione attuale, 
+					  che non supera mai \(1\). \(B\) non necessita di essere reintegrato, poiché viene 
+					  prodotto nella reazione. Al contrario, deve essere rimosso per 
+					  mantenere la reazione. La velocità di rimozione, o "velocità di 
+					  uccisione", è controllata dal parametro \(k\). Per rimuovere \(B\)più 
+					  velocemente di quanto venga aggiunto \(A\), si aggiunge \(K\) a \(F\) e si 
+					  moltiplica per \(b\), poiché si presume che anche la rimozione 
+					  di \(B\) dipenda dalla sua concentrazione.
+					  L'ultimo termine in entrambe le equazioni, essendo un'equazione laplaciana, descrive la diffusione di \(A\) e \(B\), rispettivamente.
+
+					</p>
 
 		<!-- --------------------------------------------------------------------- -->
 <section class="filetto"></section>
