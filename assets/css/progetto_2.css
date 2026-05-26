@@ -14,6 +14,9 @@ body {
 	font-variation-settings: "slnt" 0;
 }
 
+ul li::marker {
+  color: #ffffff; /* Sostituisci con il colore che preferisci */
+}
 .didascalia {
 	font-family: "Roboto", helvetica, sans-serif;
 	font-weight: lighter;
