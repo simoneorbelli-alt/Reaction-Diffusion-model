@@ -40,6 +40,16 @@ h5 {
 	line-height: 1.4em;
 	max-width: 80em;
 }
+.didascalia_sopra {
+	font-family: "Roboto", helvetica, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+	color: rgb(164, 164, 164);
+	margin: 10px 100px 0px 100px;
+	line-height: 1.4em;
+	max-width: 80em;
+}
 .colophon {
     font-weight: lighter;
 	font-style: normal;
@@ -50,13 +60,11 @@ h5 {
 }
 .elenco-puntato2 {
 	padding: 0;
-	color: rgb(164, 164, 164);
+	color: rgb(225, 255, 0);
 	margin: 0px 0px 0px 0px;
     line-height: 1.4em;
 	max-width: 35em;
-   display: flex;
-    align-items: center; /* Allinea verticalmente testo e immagini al centro */
-    gap: 20px; /* Spazio vuoto tra il paragrafo e le immagini */
+  
 }
 .elenco-puntato {
 	padding: 0;
