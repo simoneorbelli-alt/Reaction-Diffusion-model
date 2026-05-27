@@ -55,13 +55,13 @@ function setup() {
   killSlider.position(65, CANVAS_H + 45);
   killSlider.style('width', '90px');
 
-  // COLOR PICKER 1: Seleziona colore di Sfondo (Iniziale Bianco #ffffff)
-  pickerColorBg = createColorPicker('#ffffff');
+  // MODIFICATO: COLOR PICKER 1 - Sfondo Nero (#000000)
+  pickerColorBg = createColorPicker('#000000');
   pickerColorBg.position(290, CANVAS_H + 12);
-  pickerColorBg.size(45, 22); // Dimensioni molto più piccole e compatte
+  pickerColorBg.size(45, 22); 
 
-  // COLOR PICKER 2: Seleziona colore della Reazione (Iniziale Blu #0000ff)
-  pickerColorRx = createColorPicker('#0000ff');
+  // MODIFICATO: COLOR PICKER 2 - Reazione Bianca (#ffffff)
+  pickerColorRx = createColorPicker('#ffffff');
   pickerColorRx.position(290, CANVAS_H + 42);
   pickerColorRx.size(45, 22);
 }
@@ -162,11 +162,12 @@ function draw() {
   updatePixels();
 
   // INTERFACCIA UTENTE (ZONA DI CONTROLLO)
-  fill(30);
+  // Sfondo del pannello leggermente più chiaro del nero di simulazione per stacco visivo
+  fill(25); 
   noStroke();
   rect(0, CANVAS_H, CANVAS_W, CONTROL_PANEL_H);
 
-  fill(255);
+  fill(240); // Testo quasi bianco per massima leggibilità
   textSize(12);
   textAlign(LEFT, CENTER);
   textFont('sans-serif');

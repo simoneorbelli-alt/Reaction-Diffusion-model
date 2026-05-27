@@ -29,9 +29,9 @@
 			
 			<span></span>
 			
-			<h1>Organic algorithms</h1> 
+			<h1>Reaction-Diffusion</h1> 
 			
-			<h2 >Reaction-Diffusion</h2>
+			<h2 >Organic algorithms</h2>
 		
 			<span></span>
 			
@@ -66,14 +66,14 @@
 				
 				<p>
 					Uno dei pionieri della biologia matematica può essere considerato <span style="color: rgb(255, 255, 255);">Alan Turing</span>, 
-							che nel 1952 attraverso The chemical basis of morphogenesis cercò di dare una spiegazione matematica della morfogenesi, che corrisponde 
+							che nel 1952 attraverso <span style="color: rgb(255, 255, 255);">The chemical basis of morphogenesis</span> cercò di dare una spiegazione matematica della morfogenesi, che corrisponde 
 							in embriologia all’insieme dei processi che portano alla diversificazione di tessuti e organi 
 							a partire da elementi costituenti indifferenziati. Egli propose un modello di reazione-diffusione 
 							che prevede la presenza di elementi chiamati morfogeni, che diffondono modificando la loro concentrazione 
 							e controllano i processi di differenziazione. 
 							Il problema, matematicamente, è stato definito da equazioni alle derivate parziali. Il modello è, tuttavia, molto versatile 
 							e può essere applicato a diversi ambiti, tra cui ad esempio chimica, ecologia, biologia. Esso infatti è in grado di 
-							descrivere la formazione di strutture spaziali regolari in un sistema costituito da due sostanze, attivatore e inibitore. 
+							descrivere la formazione di strutture spaziali regolari in un sistema costituito da due sostanze, <span style="color: rgb(255, 255, 255);">attivatore</span> e <span style="color: rgb(255, 255, 255);">inibitore</span>. 
 							Ciò è conseguenza dell’instabilità del sistema a piccole perturbazioni senza le quali esso si troverebbe in uno stato omogeneo.
 				</p>
 				<div class="super-contenitore">
@@ -100,7 +100,7 @@
 					I modelli di Reaction-Diffusion sono composti dall'interazione di 2 elementi dispersi su un piano. 
 					Questi ultimi, da un punto di vista chimico, sono considerabili come sostanze mentre da quello matematico come delle variabili 
 					che corrispondono ad un valore differente a seconda della funzione nella quale vengono elaborate.
-					Il modello di Gray-Scott è un sistema di reazione-diffusione che simula il modo in cui due sostanze
+					Il modello di <span style="color: rgb(255, 255, 255);">Gray-Scott</span> è un sistema di reazione-diffusione che simula il modo in cui due sostanze
                     (\(A\) e \(B\)) reagiscono e si diffondono, producendo complessi modelli organici simili a quelli che si trovano
                     in natura (ad esempio, coralli, macchie di leopardo, strisce di zebra). Si tratta di un modello matematico basato sulla
                     dinamica attivatore-inibitore, spesso utilizzato per creare modelli tramite computer grafica o per studiare strutture auto-organizzate.<br>
@@ -110,9 +110,9 @@
 				<section class="filetto_sottotitoli"></section>
 				<p>Nel modello originale di Turing (Attivatore-Inibitore)Turing ha ipotizzato la presenza di due sostanze 
 					distinte: L’Attivatore, che stimola la produzione di se stesso e dell’altra sostanza e l’Inibitore che invece blocca attivamente la prima per frenarne la crescita.<br>
-					Il modello specifico di Gray-Scott ha eliminato la necessità di un inibitore chimico separato. Ha invece introdotto un meccanismo puramente matematico e cinetico:
-					la sostanza \(A\) viene aggiunta al sistema secondo un "tasso di alimentazione o feed rate" \(f\),
-                    mentre la sostanza \(B\) viene rimossa secondo un"tasso di uccisione o kill rate" \(k\). \(B\) consuma \(A\) e produce altra sostanza,
+					Il modello specifico di Gray-Scott ha eliminato la necessità di un inibitore chimico separato. Ha invece introdotto un meccanismo puramente <span style="color: rgb(255, 255, 255);">matematico e cinetico</span>:
+					la sostanza \(A\) viene aggiunta al sistema secondo un <span style="color: rgb(255, 255, 255);">tasso di alimentazione o feed rate</span> \(f\),
+                    mentre la sostanza \(B\) viene rimossa secondo un <span style="color: rgb(255, 255, 255);">tasso di uccisione o kill rate</span> \(k\). \(B\) consuma \(A\) e produce altra sostanza,
                     mimando l'autocatalisi, o per analogia, i lupi (\(B\)) che mangiano i cervi (\(A\)).	
 				</p>
 
@@ -143,7 +143,7 @@
 									<li>Quando si simula una griglia composta da migliaia di celle, possono emergere schemi su scala più ampia.
 								</ul>
 								</div>
-								<p>	La simulazione viene eseguita iterativamente, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.</p>
+								<p>	La simulazione viene eseguita <span style="color: rgb(255, 255, 255);">iterativamente</span>, aggiornando le concentrazioni di A e B in ogni cella in base alle equazioni di reazione-diffusione.</p>
 			
 <div class="margine-immagine">	
 				<img src="1.png" alt="esempio" style="width: 250px; height: auto; margin-left: -150px; margin-top: 20px;">
@@ -164,14 +164,24 @@
 				</p>
 			<img src="8.png" alt="Equazioni" style="width: 700px; height: auto; margin-left: 55px; margin-top: -20px; margin-bottom: -20px;">
 				<p>
-
+<span style="color: rgb(225, 255, 0);">Diffusione</span>: tassi per A e B. Queste sono funzioni Laplaciane 2D, che forniscono la differenza 
+tra la media delle celle della griglia vicine e questa cella. Questo simula la diffusione 
+perché \(A\) e \(B\) diventano più simili ai loro vicini. <br>
+<span style="color: rgb(225, 255, 0);">Reazione</span>: la probabilità che un A e due B si uniscano è \($A \times B \times B$\). A viene 
+convertito in \(B\), quindi questa quantità viene sottratta da \(A|) e aggiunta a \(B\). 
+<br>
+<span style="color: rgb(225, 255, 0);">Feed</span>: a un tasso \(f\), proporzionato a \((1-A)\) in modo che A non superi 1.0. <br>
+<span style="color: rgb(225, 255, 0);">Kill</span>: questo termine viene sottratto per rimuovere B ed è proporzionato a B in modo che non scenda sotto lo 0. \(f\) 
+viene aggiunto a \(k\) qui, in modo che il tasso di rimozione risultante non sia mai inferiore al tasso di alimentazione. 
+<br>
+<span style="color: rgb(225, 255, 0);">\(\Delta t\)</span> è la variazione di tempo per ogni iterazione. Tutti i termini vengono moltiplicati per questo valore.<br><br>
 					Le variabili in queste equazioni \(a\) e \(b\) sono le concentrazioni 
 					delle due sostanze reagenti \(A\) e \(B\). A sinistra di ciascuna equazione è
 					 riportata la derivata temporale di una di queste concentrazioni, 
 					 che descrive la velocità con cui essa cambia. I membri destri delle 
 					 equazioni contengono entrambi tre termini distinti. Il primo descrive 
 					 la reazione tra le due sostanze. 
-					<br> Come spiegato in precedenza, la variazione di \(f\) e \(k\) influisce sulle dinamiche del sistema.
+					<br> Come spiegato in precedenza, la <span style="color: rgb(255, 255, 255);">variazione</span> di \(f\) e \(k\) influisce sulle dinamiche del sistema.
 				</p>
 				<iframe scrolling=no frameborder=0 style="width: 400px !important; margin-left: 100px !important; height: 480px;" src="./assets/sketches/reaction_diffusion/sketch.html"></iframe>
 				
@@ -188,7 +198,7 @@
 					   Nella seconda equazione ha segno positivo, poiché \(B\) viene prodotto 
 					   nella reazione.
                      Il secondo termine della prima equazione descrive la velocità con cui 
-					 \(A\) viene reintegrato esternamente. Ciò è necessario, poiché \(A\)altrimenti 
+					 \(A\) viene <span style="color: rgb(255, 255, 255);">reintegrato</span> esternamente. Ciò è necessario, poiché \(A\)altrimenti 
 					 verrebbe semplicemente consumato. La velocità di alimentazione è data
 					  dal parametro \(F\). \(F\) viene moltiplicato per \(1 - a\) per garantire che \(a\) venga 
 					  reintegrato a una velocità dipendente dalla concentrazione attuale, 
@@ -199,20 +209,20 @@
 					  velocemente di quanto venga aggiunto \(A\), si aggiunge \(K\) a \(F\) e si 
 					  moltiplica per \(b\), poiché si presume che anche la rimozione 
 					  di \(B\) dipenda dalla sua concentrazione.
-					  L'ultimo termine in entrambe le equazioni, essendo un'equazione laplaciana, descrive la diffusione di \(A\) e \(B\), rispettivamente.
+					  L'ultimo termine in entrambe le equazioni, essendo un'<span style="color: rgb(255, 255, 255);">equazione laplaciana</span>, descrive la diffusione di \(A\) e \(B\), rispettivamente.
 
 					</p>
 					<h4 class="titolo-sezione"> Algoritmo</h4>
 				<section class="filetto_sottotitoli"></section>
 				<p>Nel codice, il modello di Reazione-Diffusione di Gray-Scott viene calcolato all'interno
-					del loop principale per ogni singola cella della griglia.Il sistema si basa su due
+					del <span style="color: rgb(255, 255, 255);">loop principale</span> per ogni singola <span style="color: rgb(255, 255, 255);">cella</span> della griglia.Il sistema si basa su due
 					equazioni differenziali alle derivate parziali che descrivono come cambiano nel tempo 
 					le concentrazioni delle sostanze \(A\) e \(B\):$$\frac{\partial A}{\partial t} = d_A \nabla^2 
 					A - AB^2 + f(1 - A)$$$$\frac{\partial B}{\partial t} = d_B \nabla^2 B + AB^2 - (k + f)B$$
 					Queste componenti matematiche vengono tradotte in codice JavaScript:
 					</p>
 					<h5 class="punto">calcolo dell'equazione laplaciana</h5>
-					<p>(\(\nabla^2 A\))Il termine \(\nabla^2 A\) e \(\nabla^2 B\) rappresenta la diffusione nello spazio. 
+					<p>(\(\nabla^2 A\))Il termine \(\nabla^2 A\) e \(\nabla^2 B\) rappresenta la <span style="color: rgb(255, 255, 255);">diffusione nello spazio</span>. 
 						Nel codice viene simulato guardando gli 8 pixel vicini a quello corrente usando una matrice di
 						 convoluzione (kernel).Invece di usare una funzione esterna (che rallenterebbe il sistema), 
 						 il calcolo è scritto "in linea" per la massima velocità: $$\Delta A_{i} = -1.0 \cdot A_{i} + 0.2 \Big( A_{i-1} + A_{i+1} + A_{i-W} + A_{i+W} \Big) + 0.05 \Big( A_{i-1-W} + A_{i+1-W} + A_{i-1+W} + A_{i+1+W} \Big)$$
@@ -222,7 +232,7 @@
 					</p>
 					<h5 class="punto">la reazione chimica</h5>
 				<p>
-Il termine \(AB^2\) rappresenta la reazione vera e propria: 
+Il termine \(AB^2\) rappresenta la <span style="color: rgb(255, 255, 255);">reazione</span> vera e propria: 
 una molecola di \(A\) incontra due molecole di \(B\), trasformando 
 \(A\) in altra sostanza \(B\). Nel codice questa interazione viene calcolata 
 semplicemente moltiplicando le concentrazioni:
@@ -239,7 +249,7 @@ semplicemente moltiplicando le concentrazioni:
 </p>
 <h5 class="punto">feed e kill</h5>
 				<p>
-					I cursori (slider) controllano direttamente questi due parametri 
+					I cursori controllano direttamente questi due parametri 
 					di ricambio fluidodinamico: \(f * (1.0 - a)\): Il tasso di alimentazione
 					 (Feed). Aggiunge costantemente la sostanza \(A\) nel sistema per evitare 
 					 che si esaurisca, ma solo se la cella non è già satura (infatti 
@@ -297,7 +307,7 @@ semplicemente moltiplicando le concentrazioni:
 				</div>
 				<p>
 
-E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è ampliato, notevolmente facilitato dalla simulazione computerizzata.
+E molti altri negli anni più recenti; il campo ad oggi si è molto ampliato, notevolmente facilitato dalla simulazione computerizzata.
 				</p>
 				<h4 class="titolo-sezione"> Implementazione</h4>
 				<section class="filetto_sottotitoli"></section>
@@ -306,7 +316,7 @@ E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è
 				e utilizzati in diversi ambiti creativi e comunicativi. Non solo, infatti,sono sistemi
 				presenti all'interno di software grafici, ma sono proprio diventati una base comunicativa
 				e stilistica per molti artisti e designer.
-				Qui di seguito sono riportati alcuni esempi fatti personalmente 
+				Qui di seguito sono riportati alcuni esempi.
 				</p>
 				
 			</div>
@@ -331,7 +341,6 @@ E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è
 					<li><a href="https://www.shadertoy.com/view/MlByzR" target="_blank">https://www.shadertoy.com/view/MlByzR</a></li>
 					<li><a href="https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system" target="_blank">https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system</a></li>
 					<li><a href="https://www.youtube.com/watch?v=COMvgTLTw6g" target="_blank">https://www.youtube.com/watch?v=COMvgTLTw6g</a></li>
-					<li><a href="https://www.youtube.com/watch?v=No6LvBBmk5E" target="_blank">https://www.youtube.com/watch?v=No6LvBBmk5E</a></li>
 					<li><a href="https://mrob.com/pub/comp/xmorphia/" target="_blank">https://mrob.com/pub/comp/xmorphia/</a></li>
 					<li><a href="https://mrob.com/pub/comp/xmorphia/ogl/index.html" target="_blank">https://mrob.com/pub/comp/xmorphia/ogl/index.html</a></li>
 					<li><a href="https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/" target="_blank">https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/</a></li>
@@ -342,11 +351,14 @@ E molti altri negli anni più recenti. A partire da Lee e Pearson il campo si è
 		<section class="filetto_sottotitoli"></section>
 			<p class="colophon">
 				Corso di Matematica per il design<br>
+				<a href="https://github.com//made-isia/2026#gruppi-di-lavoro-e-progetti" target="_blank">https://github.com//made-isia/2026#gruppi-di-lavoro-e-progetti</a><br>
 				Docente Gysin Andreas<br>
 				2025-2026<br>
-				Progetto<br>
-				Gherardo Sabato, Simone Orbelli
-				</p>
+				Reaction-Diffusion<br>
+				Gherardo Sabato, Simone Orbelli<br>
+				Lavori precedenti: <a href="https://riiiiiiiiiiick.github.io/organico-computazionale/lab.html" target="_blank">https://riiiiiiiiiiick.github.io/organico-computazionale/lab.html</a>
+			</p>
+		</section>
 
 	</main>
 </body>
