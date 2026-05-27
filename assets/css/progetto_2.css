@@ -48,6 +48,16 @@ h5 {
 	line-height: 1.4em;
 	max-width: 80em;
 }
+.elenco-puntato2 {
+	padding: 0;
+	color: rgb(164, 164, 164);
+	margin: 0px 0px 0px 0px;
+    line-height: 1.4em;
+	max-width: 35em;
+   display: flex;
+    align-items: center; /* Allinea verticalmente testo e immagini al centro */
+    gap: 20px; /* Spazio vuoto tra il paragrafo e le immagini */
+}
 .elenco-puntato {
 	padding: 0;
 	color: rgb(164, 164, 164);
@@ -223,6 +233,19 @@ ul {
 	padding: 0;
 	color: rgb(164, 164, 164);
 	margin: 20px 0px 100px 100px;
+}
+.galleria-immagini {
+    flex: 1;
+    display: flex;
+    gap: 10px; /* Spazio tra le immagini */
+}
+
+/* Dimensioniamo le immagini in modo che non escano dai bordi */
+.galleria-immagini img {
+    width: 100%;
+    max-width: 100px; /* Imposta la larghezza massima desiderata per ogni immagine */
+    height: auto;
+    border-radius: 8px; /* Opzionale: aggiunge angoli arrotondati */
 }
 /* Styles for equations inserted in the document */
 
